@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-icon {
+  display: none; /* setting display: flex; makes the hamburger menu appear */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+  z-index: 1003; /* Higher than sidebar (999) */
+}
+
+.hamburger-icon span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide off-screen */
+    width: 250px;
+    height: 100vh;
+    background: #210566;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 50px 0 0 0;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .links li {
+    padding: 15px 20px;
+  }
+
+  .links.active {
+    right: 0;
+  }
+}
