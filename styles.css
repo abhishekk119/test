@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  padding-top: 65px;
 }
 
 .navbar {
@@ -12,6 +13,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed; /* Add this */
+  top: 0; /* Add this */
+  left: 0; /* Add this */
+  z-index: 1000; /* Ensure navbar stays above other content */
 }
 
 .logo {
