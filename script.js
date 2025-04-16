@@ -1,4 +1,5 @@
 document.getElementById('hamburger-icon').addEventListener('click', () => {
+    document.getElementById('hamburger-icon').classList.toggle('active');
     document.getElementById('menu-and-button').classList.toggle('active');
 });
 
