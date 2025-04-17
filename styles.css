@@ -106,11 +106,12 @@ p {
   font-size: 1.2rem;
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
+  min-height: 4.2em;
 }
 
 .divone h1 {
   font-family: "Roboto Condensed", sans-serif;
-  min-height: 1.5em;
+  min-height: 2.2em;
 }
 
 .name {
