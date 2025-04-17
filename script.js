@@ -1,0 +1,15 @@
+document.getElementById('hamburger-icon').addEventListener('click', () => {
+    document.getElementById('hamburger-icon').classList.toggle('active');
+    document.getElementById('menu-and-button').classList.toggle('active');
+});
+
+document.getElementById('btn').addEventListener('click', () => {
+    window.location.href = 'tel:+919332522166'; // Replace with your number
+});
+
+document.getElementById("learn-more-about-me-button").addEventListener("click", () =>
+{
+    document.getElementById("about-me-div").scrollIntoView({
+        behavior: "smooth"
+    });
+});
