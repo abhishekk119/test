@@ -13,3 +13,31 @@ document.getElementById("learn-more-about-me-button").addEventListener("click", 
         behavior: "smooth"
     });
 });
+
+
+const element = document.getElementById("typewriter");
+// Split into parts you want to control
+const textBefore = "Hi, I'm ";
+const username = "Abhishek";
+const spanStart = `<span class="name">`;
+const spanEnd = `</span>`;
+
+let fullText = textBefore + username;
+let i = 0;
+
+function typeWriter() {
+  if (i < fullText.length) {
+    if (i < textBefore.length) {
+      element.innerHTML += fullText.charAt(i);
+    } else {
+      // We're in the name part
+      const typedName = fullText.substring(textBefore.length, i + 1);
+      element.innerHTML = textBefore + spanStart + typedName + spanEnd;
+    }
+    i++;
+    setTimeout(typeWriter, 75);
+  }
+}
+
+typeWriter();
+
