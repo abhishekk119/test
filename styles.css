@@ -3,9 +3,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: white;
-  overflow-x: hidden; /* Keep this if you have it */
-  overflow-y: auto; /* Ensures vertical scrolling */
 }
 
 .navbar {
