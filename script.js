@@ -41,3 +41,23 @@ function typeWriter() {
 
 typeWriter();
 
+
+const para = document.getElementById("typewriter-paragraph");
+
+// Grab the original text
+const text = para.textContent;
+
+// Clear the paragraph before typing
+para.textContent = "";
+
+let j = 0;
+
+function typeWriterParagraph() {
+  if (j < text.length) {
+    para.textContent += text.charAt(j);
+    j++;
+    setTimeout(typeWriterParagraph, 30); // Adjust speed if needed
+  }
+}
+
+typeWriterParagraph();
