@@ -80,6 +80,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 #picdiv,
@@ -108,6 +110,7 @@ p {
 
 .divone h1 {
   font-family: "Roboto Condensed", sans-serif;
+  min-height: 1.5em;
 }
 
 .name {
